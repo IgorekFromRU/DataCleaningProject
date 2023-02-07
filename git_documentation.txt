@@ -1,0 +1,36 @@
+Основные команды
+
+git init: инициализировать текущий каталог как репозиторий Git (создаётся скрытая папка .git и её содержимое).
+git clone <git-url>: загрузить копию репозитория Git по указанному URL.
+git add <filename.ext>: добавить неотслеженный или изменённый файл в промежуточную область (создаёт соответствующие записи в базе данных объектов).
+git commit -m 'Commit message': зафиксировать набор изменённых файлов и папок вместе с сообщением о коммите.
+git status: показать статус рабочего каталога, текущей ветви, неотслеженных файлов, изменённых файлов и т. д.
+git branch <new-branch>: создать новую ветвь на основе текущей извлечённой ветви.
+git checkout <branch>: извлечь указанную ветвь в рабочий каталог.
+git merge <branch>: объединить указанную ветвь с текущей, которая извлечена в рабочий каталог.
+git pull: обновить рабочую копию, объединив в неё зафиксированные изменения, которые существуют в удалённом репозитории, но не в рабочей копии.
+git push: упаковать свободные объекты для локальных коммитов активной ветви в файлы пакета и перенести в удалённый репозиторий.
+git log: показать историю коммитов и соответствующие сообщения для активной ветви.
+git stash: сохранить все незафиксированные изменения из рабочего каталога в кэш, чтобы извлечь их позже.
+
+
+Create a new repository on the command line
+echo "# DataCleaningProject" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M master
+git remote add origin https://github.com/IgorekFromRU/DataCleaningProject.git
+git push -u origin master
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/IgorekFromRU/DataCleaningProject.git
+git branch -M master
+git push -u origin master
+
+По-умолчанию Git посылает вывод своих комманд на программу-pager.
+По-умолчанию это программа less. Выйти из less можно пятью способами: q,Q, :q, :Q и ZZ.
+Можно разными способами выйти из просмотра логов git log:
+HotKey Ctrl + C
+HotKey Ctrl + Break
+Ввести Q и нажать Enter
